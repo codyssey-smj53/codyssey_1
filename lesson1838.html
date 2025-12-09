@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml" class="" translate="">
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="코딩테스트 연습 - 몸짱 트레이너 라이언의 고민">
+<meta name="og:title" property="og:title" itemprop="title name" content="코딩테스트 연습 - 몸짱 트레이너 라이언의 고민">
+<meta name="twitter:description" property="og:description" itemprop="description" content="알고리즘 문제 연습 카카오톡 친구해요! 프로그래머스 교육 카카오 채널을 만들었어요. 여기를 눌러, 친구 추가를 해주세요. 신규 교육 과정 소식은 물론 다양한 이벤트 소식을 가장 먼저 알려드립니다.">
+<meta name="og:description" property="og:description" itemprop="description" content="알고리즘 문제 연습 카카오톡 친구해요! 프로그래머스 교육 카카오 채널을 만들었어요. 여기를 눌러, 친구 추가를 해주세요. 신규 교육 과정 소식은 물론 다양한 이벤트 소식을 가장 먼저 알려드립니다.">
+<meta name="twitter:image" property="og:image" itemprop="image primaryImageOfPage" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="og:image" property="og:image" itemprop="image primaryImageOfPage" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="twitter:url" property="og:url" content="https://programmers.co.kr/">
+<meta name="og:url" property="og:url" content="https://programmers.co.kr/">
+<meta charset="utf-8">
+<title>코딩테스트 연습 - 몸짱 트레이너 라이언의 고민 | 프로그래머스 스쿨</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://school.programmers.co.kr/assets/icons/favicon-ec61d910396b5fc4d7418ea44281693172c34e31d437d074f9ab5470523990fb.png">
+<link rel="apple-touch-icon" type="image/png" href="https://school.programmers.co.kr/assets/icons/apple-icon-8a32ac937e12475676c7102e99d34b7f908b3d1ac048d6eed0712ad111bfdd01.png">
+<meta name="description" content="알고리즘 문제 연습 카카오톡 친구해요! 프로그래머스 교육 카카오 채널을 만들었어요. 여기를 눌러, 친구 추가를 해주세요. 신규 교육 과정 소식은 물론 다양한 이벤트 소식을 가장 먼저 알려드립니다.">
+<meta name="keywords" content="코딩 교육, 코딩, 프로그래밍, 실습, 생활코딩, 알고리즘, cpp, 영상/실습 강의, 추천 강의">
+<meta property="fb:app_id" content="339079816467879">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="프로그래머스 스쿨">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="image" content="https://image.freepik.com/free-vector/landing-page-template-for-a-website_23-2147782747.jpg">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="FWX6YMnc8X_lJfzPBY9G1bH668SMWySCTflnVu_QOt0C3dYjkDb3sTMWdwsEiqGnHXFc6V68SBRM5ZkzBPsdHw" />
+<meta name="action-cable-url" content="wss://ws.programmers.co.kr:443/cable" />
+<script type="text/javascript" charset="utf-8">
+  window.__env__ = {
+  STAGE: 'production',
+  SITE: 'programmers',
+  SENTRY_DSN: 'https://96f9fc1ff3f44acbb98a9c156338d14b@o1070092.ingest.sentry.io/6136918',
+  HACKLE_BROWSER_KEY: 'OKQUz9iLXiTPyzwOAyq44sT4uwMqfCzz',
+  HACKLE_EVENT_SERVER_INIT: true, // 핵클 초기화 코드 이전을 위한 임시 플래그 배포 후 삭제 예정
+  HERA_CLIENT_HOST: 'https://d1nuzc1w51n1es.cloudfront.net',
+  PROGRAMMERS_HOST: 'programmers.co.kr',
+  BUSINESS_HOST: 'business.programmers.co.kr',
+  SCHOOL_HOST: 'school.programmers.co.kr',
+  INSTRUCTOR_SCHOOL_HOST: 'instructor.school.programmers.co.kr',
+  CAMPUS_HOST: 'campus.programmers.co.kr',
+  PROGRAMMERS_WS_HOST: 'ws.programmers.co.kr',
+  COMMUNITY_HOST: 'community.programmers.co.kr',
+  QNA_HOST: 'qna.programmers.co.kr',
+  IS_PROGRAMMERS_APP_REQUEST: false,
+};
+
+</script>
+  <script id="__hackle-init-info" data-user-id="" data-internal-account=""></script>
+<script src="/assets/hackle_event_initializer-2decc783baaed7cdfba6b3ba315d282eaf5eb75f3565979fc7d54934bef78a4f.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="/assets/library-05704bb25291ce17972d22267cf938317aa9808756330022d3fa676cf1e0ced1.css" media="all" debug="false" />
+  <link rel="stylesheet" href="/assets/application-58fb19bb932496d23096ea4d08d346ed4d6e2b49b1d6a8033982be83a273a656.css" media="all" />
+  <link rel="stylesheet" href="/assets/school-79ffc0a54d53e0cef48a66b3a7e9850fe450b9d18b77ccec8587d4c7a8857b77.css" media="all" />
+
+<meta name="google-site-verification" content="Z9qZz155KQLu77llc1wF4LlccJE88dymkeGyw1I62JY" />
+
+
+
+  <!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({
+    'gtm.start':
+      new Date().getTime(), event: 'gtm.js'
+  });
+  var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true;
+  j.src =
+    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-NT8HLJD');</script>
+<!-- End Google Tag Manager -->
+
+
+</head>
+<body class="learn-lessons learn-lessons-show "
+      data-ns="Learn"
+      data-controller="lessons"
+      data-action="show"
+      data-defaultLocale="ko"
+      data-locale="ko"
+      data-signed-in="false">
+
+
+
+  <div class="navbar navbar-dark navbar-expand-lg navbar-application navbar-breadcrumb">
+    <a class="navbar-brand" href="/">
+      <img alt="logo" width="24" src="/assets/bi-symbol-light-4a9edc980025418d6883d7519df4acf2b6c65f068508931dff0881d1c5ad4721.png" />
+</a>  <ol class="breadcrumb"><li><a href="/learn/challenges">코딩테스트 연습</a></li><li><a href="/learn/challenges">2017 카카오코드 본선</a></li><li class="active">몸짱 트레이너 라이언의 고민</li></ol>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item"><a onclick="Learn.lessons.challengeable.startTour(true)" class="nav-link" id="help" href="#">도움말</a></li>
+        <li class="nav-item"><a class="nav-link" data-remote="true" href="/compile_options">컴파일 옵션</a></li>
+      </ul>
+    </div>
+</div>
+
+
+
+<div class="main theme-dark">
+  
+<script src="https://d1nuzc1w51n1es.cloudfront.net/af63cf046d545ce93026.js" defer="defer"></script>
+
+
+  <div class="lesson-content"
+       data-course-slug="코딩테스트-연습"
+       data-course-id="30"
+       data-lesson-id="1838"
+       data-lesson-type="Challenge"
+       data-lesson-title="몸짱 트레이너 라이언의 고민"
+       data-lesson-ai-commentable="false"
+       data-challenge-level="3"
+       data-challenge-category="algorithm"
+       data-course-category="open_challenge"
+       data-next-lesson-id="">
+
+    
+
+<div class="challenge-nav nav nav-tabs nav-tabs-dark task-tab"  id="tab" role="tablist">
+  <div class="challenge-nav-left-menu">
+      <div class="algorithm-bookmarks" data-bookmarked="false">
+        <div id="challenge-bookmark-delete"
+            class="icon-bookmark challenge-bookmark hidden"
+            data-user-signed-in="false"
+            data-lesson-id="1838"
+            data-bookmarked="true"
+            data-toggle="tooltip"
+            data-placement="top"
+            data-original-title="즐겨찾기 해제"
+            data-hackle-value="{&quot;key&quot;:&quot;open_challenge_lesson_bookmark_clicked&quot;,&quot;properties&quot;:{&quot;course_id&quot;:30,&quot;lesson_id&quot;:1838,&quot;bookmarked&quot;:false}}">
+          <svg class="ic-bookmark ic-24"><use xlink:href="/assets/svg-defs-6905fdf303bc73e2fda0aab4ba894b1327e4957a5734eab41b21e85bd64c8267.svg#ic-bookmark"/></svg>
+          <div class="hover-bg"></div>
+        </div>
+        <div id="challenge-bookmark"
+            class="icon-bookmark challenge-bookmark"
+            data-user-signed-in="false"
+            data-lesson-id="1838"
+            data-bookmarked="false"
+            data-toggle="tooltip"
+            data-placement="top"
+            data-original-title="먼저 로그인을 해주세요."
+            data-hackle-value="{&quot;key&quot;:&quot;open_challenge_lesson_bookmark_clicked&quot;,&quot;properties&quot;:{&quot;course_id&quot;:30,&quot;lesson_id&quot;:1838,&quot;bookmarked&quot;:true}}">
+          <svg class="ic-bookmark-border ic-24 icon-bookmark"><use xlink:href="/assets/svg-defs-6905fdf303bc73e2fda0aab4ba894b1327e4957a5734eab41b21e85bd64c8267.svg#ic-bookmark-border"/></svg>
+          <div class="hover-bg"></div>
+        </div>
+      </div>
+
+      <div class="nav-item algorithm-nav-link algorithm-title">
+        <span class="challenge-title">몸짱 트레이너 라이언의 고민</span>
+      </div>
+  </div>
+
+  <div class="challenge-nav-right-menu">
+    
+<div class="challenge-settings nav-item">
+    <div class="btn-group-theme btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-sm btn-outline-dark active">
+          <input type="radio" name="themes" autocomplete="off" checked data-toggle="button" data-theme="dark">dark
+        </label>
+        <label class="btn btn-sm btn-outline-dark ">
+          <input type="radio" name="themes" autocomplete="off"  data-toggle="button" data-theme="light">light
+        </label>
+    </div>
+
+      <div data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="코드 에디터의 단축키를 설정하는 옵션입니다. 선호하는 에디터 옵션이 없다면 sublime을 선택해주세요.">
+        <div class="btn-group-keymap btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-sm btn-outline-dark active">
+              <input type="radio" name="keymaps" autocomplete="off" checked data-keymap="sublime">sublime
+            </label>
+            <label class="btn btn-sm btn-outline-dark ">
+              <input type="radio" name="keymaps" autocomplete="off"  data-keymap="vim">vim
+            </label>
+            <label class="btn btn-sm btn-outline-dark ">
+              <input type="radio" name="keymaps" autocomplete="off"  data-keymap="emacs">emacs
+            </label>
+        </div>
+      </div>
+
+    <div class="dropdown-language" id="tour7">
+      <button class="btn btn-sm btn-dark dropdown-toggle" type="button" data-toggle="dropdown">
+        C++
+      </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/learn/courses/30/lessons/1838?language=cpp">C++</a>
+            <a class="dropdown-item" href="/learn/courses/30/lessons/1838?language=java">Java</a>
+        </div>
+    </div>
+
+
+  <div class="connection-box connection-status disconnected js-connection-status-alert">
+    <svg class="ic-18"><use xlink:href="/assets/svg-defs-6905fdf303bc73e2fda0aab4ba894b1327e4957a5734eab41b21e85bd64c8267.svg#ic-power-off"/></svg>
+    <span class="connection-status-txt">네트워크 연결 끊김</span>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div class="challenge-content lesson-algorithm-main-section "
+     data-challengeable-id="850"
+     data-challengeable-type="algorithm"
+     data-algorithm-type="standard"
+     data-language="cpp"
+     data-user-id=""
+     data-interface-type="function"
+     data-lesson-comment-activation-score="30"
+     data-is-lesson="true">
+    <div data-hackle-view="{&quot;key&quot;:&quot;school_lesson_challenge_viewed&quot;,&quot;properties&quot;:{&quot;course_id&quot;:30,&quot;challenge_title&quot;:&quot;몸짱 트레이너 라이언의 고민&quot;,&quot;challenge_level&quot;:3,&quot;challenge_category&quot;:&quot;algorithm&quot;}}"
+    ></div>
+    
+
+<div class="main-section tab-content">
+  <div class="guide-section">
+    <div class="tab-pane fade active show" id="tour2">
+      <div class="guide-section-description">
+        <h6 class="guide-section-title">문제 설명</h6>
+        <div class="markdown solarized-dark"><h2>몸짱 트레이너 라이언의 고민</h2>
+
+<p><img src="https://t1.kakaocdn.net/codefestival/ryan1.png" title="" alt="picture"></p>
+
+<p>헬스장에서 일하는 몸짱 트레이너 라이언은 최근 손님들에게 불평을 많이 들었다.<br>
+그것은 옷을 갈아입는데 다른 사람과 너무 가까워서 옷을 갈아입기가 불편하다는 것이었다.</p>
+
+<p>불만을 해결하기 위해 고민하던 라이언은 손님들의 예약시간을 참고해서 되도록이면 서로 멀리 떨어지도록 키를 나눠주기로 마음먹었다. 예를 들어, 락커들이 3x3 정사각형 모양으로 배치되어있고, 동시간대에 2명의 손님이 예약되어있다면 아래와 같이 락커를 할당하는 것을 고려해볼 수 있다.</p>
+
+<p><img src="https://t1.kakaocdn.net/codefestival/ryan2.png" title="" alt="picture"></p>
+
+<p>라이언이 일하는 헬스장은 아래와 같은 상황이라고 가정하자.</p>
+
+<ul>
+<li>락커는 정사각형으로 배치되어있고, 락커 사이에 옷을 갈아입을 공간이 있다. 단, 이 공간은 계산에서 제외된다.</li>
+<li>락커 간 거리는 상하좌우는 1로, 대각선은 2로 계산한다.</li>
+<li>손님들은 철저하게 예약시간에 맞춰 락커를 이용하고, 퇴실하는 시간까지 락커를 차지한다.</li>
+<li>영업시간은 오전 10시부터 오후 10시까지이다.</li>
+<li>헬스장은 예약제로 운영되므로 락커의 개수보다 더 많은 손님들이 동시간대에 몰리는 경우는 없다.</li>
+</ul>
+
+<p>이런 조건에서 헬스장을 이용한 손님들 중 가장 가까웠던 손님 간의 거리는 얼마일까?</p>
+
+<h3>입력 형식</h3>
+
+<p>입력은 정사각형 한 변의 길이 <code>n</code>과 손님수 <code>m</code>, 그리고 각 손님의 예약된 입실/퇴실 시간 <code>timetable</code>로 주어진다. 제한조건은 다음과 같다.</p>
+
+<ul>
+<li><code>0 &lt; n &lt;= 10</code></li>
+<li><code>0 &lt;= m &lt;= 1,000</code></li>
+<li><code>timetable</code>은 <code>m × 2</code> 크기의 2차원 배열이다. 각 행은 손님의 입실시각과 퇴실시각이 분 단위로 환산된 값 <code>(t1, t2)</code>가 들어있다.
+
+<ul>
+<li><code>t1</code>, <code>t2</code>에 대해서는 다음 조건이 성립한다. <code>600 &lt;= t1 &lt; t2 &lt;= 1,320</code></li>
+</ul></li>
+</ul>
+
+<h3>출력 형식</h3>
+
+<p>할당된 락커들 간 거리 중 최소거리를 리턴한다. 손님 간에 이용 시간이 한 번도 겹치지 않을 경우에는 <code>0</code>을 리턴한다.</p>
+
+<h3>예제 입출력</h3>
+<table class="table">
+        <thead><tr>
+<th>n</th>
+<th>m</th>
+<th>timetable</th>
+<th>answer</th>
+</tr>
+</thead>
+        <tbody><tr>
+<td>3</td>
+<td>2</td>
+<td>[[1170,1210], [1200,1260]]</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>[[840,900]]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>[[600,630],[630,700]]</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>[[1140,1200],[1150,1200],[1100,1200],[1210,1300],[1220,1280]]</td>
+<td>4</td>
+</tr>
+</tbody>
+      </table>
+<h3>예제에 대한 설명</h3>
+
+<ul>
+<li>첫 번째 예제: 손님 2명이 20:00부터 20:10까지 이용시간이 겹치고, 이 상황은 본문에 소개된 예와 같다.</li>
+<li>두 번째 예제: 손님이 1명으로 겹치는 시간이 없기 때문에 0을 출력한다.</li>
+<li>세 번째 예제: 손님 2명이 10:30에 겹친다. 2x2 정사각형에 2명을 배치해야 하므로 정답은 2가 된다. (ex. (0,0), (1,1)에 배치)</li>
+<li>네 번째 예제: 손님 3명이 19:10부터 20:00까지 이용시간이 겹친다. 이 경우 아래와 같이 배치해서 할당된 모든 락커 간 거리가 4가 되도록 할 수 있다. (할당된 락커는 #으로 표시)</li>
+</ul>
+<div class="highlight"><pre class="codehilite"><code># 0 0 0
+0 0 0 #
+0 0 0 0
+0 # 0 0 
+</code></pre></div>
+<ul>
+<li>네 번째 예제에서 손님을 모서리부터 배치하는 건 좋은 전략이 아니다. 2명까지는 거리가 6으로 가장 먼 거리가 되지만 예약된 다음 손님이 들어오면 할당된 락커 간 거리는 3이 돼버린다. 이런 경우 라이언은 예약시간을 고려해서 거리가 4가 되도록 배치한다.</li>
+</ul>
+</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="run-section">
+    <div id="tour3" class="code-section" onkeyup="Hera.tryoutChallenges.resizeEditor(this);">
+      <div class="editor">
+        <ul class="nav nav-pills editor-nav-pills tap-form">
+    <input type="hidden" name="initial_code_2626" id="initial_code_2626" value="#include &lt;vector&gt;
+
+using namespace std;
+
+// 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요.
+int solution(int n, int m, vector&lt;vector&lt;int&gt;&gt; timetable) {
+    int answer = 0;
+    return answer;
+}" autocomplete="off" />
+    <input id="2626"
+           data-type="code"
+           data-language="cpp"
+           type="hidden"
+           value="#include &lt;vector&gt;
+
+using namespace std;
+
+// 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요.
+int solution(int n, int m, vector&lt;vector&lt;int&gt;&gt; timetable) {
+    int answer = 0;
+    return answer;
+}"/>
+    <li class="nav-item">
+      <a href="#" class="btn-tab nav-link active"
+         data-id="2626"
+         data-language="cpp">
+        solution.cpp </a>
+    </li>
+</ul>
+        
+          <textarea hidden id="code" name="code">#include &lt;vector&gt;
+
+using namespace std;
+
+// 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요.
+int solution(int n, int m, vector&lt;vector&lt;int&gt;&gt; timetable) {
+    int answer = 0;
+    return answer;
+}</textarea>
+      </div>
+    </div>
+
+    <div class="output-section" id="tour6">
+      <div class="tab-header">
+          <div id="output-title" class="output-title output-only" data-toggle="tab">
+            <span class="connection-status disconnected"
+                  data-container="body" data-toggle="popover" data-placement="top" title="서버와의 연결 끊김" data-html="true"
+                  data-content="
+                    <h6>네트워크가 불안정하여 서버와의 연결이 끊어졌습니다.
+                    페이지 새로고침을 하거나 네트워크가 안정적이 되면 자동으로 재 연결됩니다.</h6>
+                    <h6 style='margin-top: 4px;'>네트워크가 정상임에도 계속해서 연결이 끊어진 상태가 지속된다면 네트워크 방화벽 문제일 수 있습니다.
+                    모바일 테더링 등 다른 네트워크를 통해 테스트에 접속해 보세요.</h6>">
+              <svg class="ic-24"><use xlink:href="/assets/svg-defs-6905fdf303bc73e2fda0aab4ba894b1327e4957a5734eab41b21e85bd64c8267.svg#ic-power-off"/></svg>
+            </span>
+
+            실행 결과
+              <a id="stop-button" class="btn btn-sm btn-danger" href="#">실행 중지</a>
+            <span id="output-spinner" class="spinner hidden">
+              <span class="bounce1"></span>
+              <span class="bounce2"></span>
+              <span class="bounce3"></span>
+            </span>
+          </div>
+      </div>
+
+      <div class="console tab-content">
+          <div id="output" class="console-output tab-pane fade in active show banner">
+            <div id="output-wrapper">
+              실행 결과가 여기에 표시됩니다.
+              <pre class='console-content'><div></div></pre>
+            </div>
+              
+
+  <div
+    class="challengeable-banner-wrapper initial-banner hidden"
+    style="position:relative;width:100%;display:flex;justify-content:end;position:absolute;right: 0px;bottom: 21px;"
+    data-hackle-view="{&quot;key&quot;:&quot;school_challenge_initial_banner_viewed&quot;,&quot;properties&quot;:{&quot;course_id&quot;:30,&quot;lesson_id&quot;:1838,&quot;banner_id&quot;:10560,&quot;challenge_title&quot;:&quot;몸짱 트레이너 라이언의 고민&quot;,&quot;challenge_level&quot;:3,&quot;challenge_category&quot;:&quot;algorithm&quot;}}">
+    <a href="https://school.programmers.co.kr/learn/courses/25553" target="_blank" style="width:100%; max-width:320px;"
+      data-hackle-value="{&quot;key&quot;:&quot;school_challenge_initial_banner_clicked&quot;,&quot;properties&quot;:{&quot;course_id&quot;:30,&quot;lesson_id&quot;:1838,&quot;banner_id&quot;:10560,&quot;challenge_title&quot;:&quot;몸짱 트레이너 라이언의 고민&quot;,&quot;challenge_level&quot;:3,&quot;challenge_category&quot;:&quot;algorithm&quot;}}">
+      <img src="https://grepp-programmers.s3.amazonaws.com/production/file_resource/8818/DEV-BE-DEEP-coding-test-03_640x180_.jpg" alt="프로그래머스 K-Digital Training"  style="width:100%; max-width:320px;">
+    </a>
+  </div>
+
+
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="button-section">
+  <div class="testcase-button">
+      <a id="btn-show-question" class="btn btn-dark" href="/learn/courses/30/lessons/1838/questions">질문하기 (7)</a>
+  </div>
+
+  <div class="func-buttons">
+
+      <a class="btn btn-primary" href="https://programmers.co.kr/account/sign_in?referer=https%3A%2F%2Fschool.programmers.co.kr%2Flearn%2Fcourses%2F30%2Flessons%2F1838%3Flanguage%3Dpython3">로그인하기</a>
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+</div>
+
+
+
+<div class="modal fade" id="modal-dialog" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+  <script src="/assets/library-6b936c94490ec5c3c826ecf46f3e66e4f5a0d52e9930e426df8f94fb35b2b7de.js" debug="false"></script>
+  <script>
+//<![CDATA[
+    I18n.defaultLocale = "ko";
+    I18n.locale = "ko";
+    I18n.fallbacks = true;
+
+//]]>
+</script>  <script src="/assets/application-0a42c791d4e31e6485c8ca9f45f7dd4329315949ddb4df62bc56e1da5f37de27.js"></script>
+
+<script>
+//<![CDATA[
+window.addEventListener('load', function() {});
+//]]>
+</script>
+  <script src="//widget.cloudinary.com/global/all.js" type="text/javascript">
+    cloudinary.setCloudName('eightcruz');
+  </script>
+
+  <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
+  <script
+    src="https://browser.sentry-cdn.com/7.104.0/bundle.min.js"
+    integrity="sha384-QLRjp0fR75x7D0LjPI+SXePWP9XQ0m2EmTJkX3pjLU45zt9uU2FgmiiqnMGl9w/N"
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript">
+    Sentry.init({
+      environment: "production",
+      dsn: "https://96f9fc1ff3f44acbb98a9c156338d14b@o1070092.ingest.sentry.io/6136918",
+      initialScope: {
+        code_version: "380eadca564a4a3ddec88a7b650ea09cb9e4974b",
+      },
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      beforeSend: function beforeSend(event) {
+        const firstException = (event.exception && event.exception.values || [])[0];
+
+        if (firstException) {
+          const mechanism = firstException.mechanism;
+          const stacktrace = firstException.stacktrace;
+          const value = firstException.value;
+
+          const isOnError = () => mechanism && mechanism.type === 'onerror';
+          const hasAnonymousFilename = () => Boolean(
+            stacktrace && stacktrace.frames && stacktrace.frames.some(
+              ({ filename }) => filename && filename.includes('anonymous'),
+            ),
+          );
+
+          const isIgnorableAgoraError = value?.includes('can not generate join message, no join info') || value?.includes('WS_ABORT');
+
+          /* console의 예외는 sentry에 보내지 않는다. #4226 */
+          if (isOnError() && hasAnonymousFilename())
+            return null;
+
+          if (isIgnorableAgoraError)
+            return null;
+        }
+
+        return event;
+      },
+    });
+  </script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NT8HLJD"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript" charset="utf-8">
+  window.addEventListener('afterprint', function() {
+      $.ajax({
+          type: 'POST',
+          url: '/api/action_trackings/print_screen',
+          data: {
+              current_path: window.location.href
+          }
+      })
+  })
+</script>
+
+
+
+
+<noscript>
+  이 사이트의 기능을 모두 활용하기 위해서는 자바스크립트를 활성화할 필요가 있습니다.
+  <a href="http://www.enable-javascript.com/ko/" target="_blank">
+    브라우저에서 자바스크립트를 활성화하는 방법</a>을 참고하세요.
+</noscript>
+
+</body>
+</html>
