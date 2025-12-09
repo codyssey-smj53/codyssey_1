@@ -18,6 +18,7 @@ from typing import Iterable, List, Sequence, Tuple
 DIGIT_DOMAIN: Tuple[int, ...] = (0, 1, 2, 3, 4, 5, 6, 7, 8)
 DIGIT_TO_INDEX = {digit: idx for idx, digit in enumerate(DIGIT_DOMAIN)}
 DIGIT_TO_INDEX[9] = DIGIT_TO_INDEX[6]
+_ACTIVE_BOUNDS: Tuple[int, int] | None = None
 
 
 @dataclass(slots=True)
@@ -173,6 +174,15 @@ def maximize_representable_numbers(
     return OptimizationResult(best_count, c_faces, covered_values)
 
 
+def func(dice_a: Sequence[int], dice_b: Sequence[int]) -> OptimizationResult:
+    """Wrapper that reuses the bounds captured by ``main``."""
+
+    if _ACTIVE_BOUNDS is None:
+        raise RuntimeError("Bounds are not initialized. Run main() first.")
+    lower, upper = _ACTIVE_BOUNDS
+    return maximize_representable_numbers(dice_a, dice_b, lower, upper)
+
+
 def _parse_digits_from_line(line: str) -> List[int]:
     extracted = [int(ch) for ch in re.findall(r"\d", line)]
     if len(extracted) < 6:
@@ -211,7 +221,10 @@ def main() -> None:
     b_digits = _parse_digits_from_line(lines[1])
     lower, upper = _parse_bounds(lines[2:])
 
-    result = maximize_representable_numbers(a_digits, b_digits, lower, upper)
+    global _ACTIVE_BOUNDS
+    _ACTIVE_BOUNDS = (lower, upper)
+
+    result = func(a_digits, b_digits)
     print(f"max_count: {result.max_count}")
     print("c_faces: " + " ".join(str(face) for face in result.c_faces))
     print("covered_values: " + _format_values(result.covered_values))
